@@ -1,6 +1,4 @@
 package com.ra.model.service;
-
-import com.mysql.cj.xdevapi.SessionFactory;
 import com.ra.model.entity.Category;
 import com.ra.model.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;

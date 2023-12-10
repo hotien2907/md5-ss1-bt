@@ -6,6 +6,17 @@ CREATE TABLE category (
                           status BOOLEAN DEFAULT true
 );
 
+CREATE TABLE  products (
+    productId INT PRIMARY KEY AUTO_INCREMENT,
+    productName VARCHAR(100) NOT NULL,
+    description VARCHAR(255),
+    price DOUBLE NOT NULL,
+    image VARCHAR(255),
+    stock INT NOT NULL,
+    categoryId INT,
+    FOREIGN KEY (categoryId) REFERENCES category(categoryId)
+    );
+
 
 INSERT INTO category (categoryName, status) VALUES ('Category 1', true);
 INSERT INTO category (categoryName, status) VALUES ('Category 2', true);

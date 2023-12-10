@@ -2,6 +2,7 @@ package com.ra.model.entity;
 
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "category")
@@ -16,6 +17,19 @@ public class Category {
 
     @Column(name = "status")
     private String status;
+
+
+    @OneToMany(mappedBy = "category")
+    private Set<Product> products;
+
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+    }
+
     public Category() {
     }
 

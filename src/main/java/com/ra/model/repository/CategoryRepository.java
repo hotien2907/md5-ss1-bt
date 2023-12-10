@@ -4,7 +4,6 @@ import java.util.List;
 
 
 public interface CategoryRepository {
-
     List<Category> findAll();
     Boolean saveOrUpdate(Category category);
     Boolean  delete (Integer id);
